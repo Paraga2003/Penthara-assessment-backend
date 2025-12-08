@@ -10,7 +10,11 @@ import dashboardRouter from './routes/dashboard.js'
 connectToDatabase();
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: "https://penthara-assessment-frontend.vercel.app",
+  credentials: true
+}
+));
 app.use(express.json());
 app.use('/api/auth', authRouter);
 app.use('/api/departments', departmentRouter);
