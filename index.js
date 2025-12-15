@@ -11,7 +11,7 @@ connectToDatabase();
 
 const app = express();
 app.use(cors({
-  origin: "https://penthara-assessment-frontend.vercel.app",
+  origin: "http://localhost:5173",
   credentials: true
 }
 ));
